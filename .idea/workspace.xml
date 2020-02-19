@@ -14,7 +14,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XzYueX7sEzdcmzgSsafZEoxjzz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../movie_swiper/movie-swiper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src1" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
@@ -37,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582050621737</updated>
       <workItem from="1582050651126" duration="4434000" />
+      <workItem from="1582102035935" duration="436000" />
     </task>
     <servers />
   </component>
