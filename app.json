@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "BasicApp",
     "slug": "my-new-project",
     "privacy": "public",
     "sdkVersion": "36.0.0",
