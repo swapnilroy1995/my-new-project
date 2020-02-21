@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9225b5ab-524f-412c-a12a-2e898c3588ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/demoApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src1/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/components/addGoals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/components/AddGoals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/screens/practise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/screens/practise.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
       <workItem from="1582050651126" duration="4434000" />
       <workItem from="1582102035935" duration="18597000" />
       <workItem from="1582193202443" duration="6591000" />
-      <workItem from="1582203075512" duration="1195000" />
+      <workItem from="1582203075512" duration="4727000" />
     </task>
     <servers />
   </component>
@@ -78,10 +74,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="398" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582051290046" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1582139678122">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1582221127711">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582139678122" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582221127711" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582139879489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,15 +1,15 @@
 import React, {Component,useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, StatusBar,TextInput, Button, Alert} from 'react-native';
-
+import AddGoals from '../components/AddGoals';
 export default function countFunction(){
     const [count, setcount] = useState(0);
     const [goalsCount, setgoalsCount] = useState(0);
-    const [enteredGoal, setenteredGoal] = useState(null);
+    // const [enteredGoal, setenteredGoal] = useState(null);
     const [listGoal, setlistGoal] = useState([]);
     // let enteredGoal='';
     var goals=[];
     var goalCount=0;
-    function makeGoals(){
+    function makeGoalsList(enteredGoal){
 
         setlistGoal(currentList=>[...currentList,enteredGoal]);
         setgoalsCount(currentCount=> currentCount+1);
@@ -46,19 +46,20 @@ export default function countFunction(){
                 <Text>{count}</Text>
             </View>
             <View style={styles.goalsView}>
-                <View style={styles.goalsTextInputContainer}>
-                    <TextInput placeholder={'Enter you goals one at a time'} style={styles.goalsTextInput} onChangeText={text=>setenteredGoal(text)} value ={enteredGoal}/>
-                    {console.log(enteredGoal)}
-                    <Button title='Add1' style={{borderRadius:5}} onPress={()=>{
-                        goals.push(enteredGoal);
-                        goalCount=goalCount+1
-                    }}/>
-                    <Button title='Add' style={{borderRadius:5}} onPress={()=>{
-                      console.log('adasdadasdasdasd',listGoal,goalsCount);
-                      alert(goals);
-                    }}/>
-                    <Button title='Add2' style={{borderRadius:5}} onPress={makeGoals}/>
-                </View>
+                <AddGoals makeGoalsList={makeGoalsList}/>
+                {/*<View style={styles.goalsTextInputContainer}>*/}
+                {/*    <TextInput placeholder={'Enter you goals one at a time'} style={styles.goalsTextInput} onChangeText={text=>setenteredGoal(text)} value ={enteredGoal}/>*/}
+                {/*    {console.log(enteredGoal)}*/}
+                {/*    <Button title='Add1' style={{borderRadius:5}} onPress={()=>{*/}
+                {/*        goals.push(enteredGoal);*/}
+                {/*        goalCount=goalCount+1*/}
+                {/*    }}/>*/}
+                {/*    <Button title='Add' style={{borderRadius:5}} onPress={()=>{*/}
+                {/*      console.log('adasdadasdasdasd',listGoal,goalsCount);*/}
+                {/*      alert(goals);*/}
+                {/*    }}/>*/}
+                {/*    <Button title='Add2' style={{borderRadius:5}} onPress={makeGoals}/>*/}
+                {/*</View>*/}
                 {/*<Text>adsdasdasd {listGoal}</Text>*/}
             </View>
             {listGoal.map(goals=>{
