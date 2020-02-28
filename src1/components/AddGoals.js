@@ -1,25 +1,17 @@
 import React, { useState } from "react";
-import {View, Text, Button, TextInput} from 'react-native';
+import {View, Text, Button, TextInput,StyleSheet, Keyboard} from 'react-native';
 
 export default function AddGoals(props){
-    const [enteredGoal, setenteredGoal]= useState([]);
+    const [enteredGoal, setenteredGoal]= useState('');
     function makeGoals(){
+        Keyboard.dismiss();
         props.makeGoalsList(enteredGoal);
-        setenteredGoal((goal)=>[]);
+        setenteredGoal((goal)=>'');
 
     }
     return(
         <View style={styles.goalsTextInputContainer}>
             <TextInput placeholder={'Enter you goals one at a time'} style={styles.goalsTextInput} onChangeText={text=>setenteredGoal(text)} value ={enteredGoal}/>
-            {console.log(enteredGoal)}
-            {/*<Button title='Add1' style={{borderRadius:5}} onPress={()=>{*/}
-            {/*    goals.push(enteredGoal);*/}
-            {/*    goalCount=goalCount+1*/}
-            {/*}}/>*/}
-            {/*<Button title='Add' style={{borderRadius:5}} onPress={()=>{*/}
-            {/*    console.log('adasdadasdasdasd',listGoal,goalsCount);*/}
-            {/*    alert(goals);*/}
-            {/*}}/>*/}
             <Button title='Add2' style={{borderRadius:5}} onPress={()=>makeGoals()}/>
         </View>
     )
