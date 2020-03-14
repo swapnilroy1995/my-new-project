@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9225b5ab-524f-412c-a12a-2e898c3588ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src1/screens/ForgotPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src1/store/actions/AppFeatures.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/components/AddGoals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/components/AddGoals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src1/screens/practise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/screens/Practise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/screens/Practise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/screens/Practise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/store/actionTypes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-native-project2/React_native_project2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tutorials/[FreeCourseSite.com] Udemy - React Native - The Practical Guide/6. Navigation with React Navigation [THE MEALS APP]/nav-18-finished" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="G:\react-native\my-new-project\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -191,7 +189,12 @@
       <workItem from="1582719303907" duration="3091000" />
       <workItem from="1582781189457" duration="871000" />
       <workItem from="1582785114009" duration="4588000" />
-      <workItem from="1582888319409" duration="628000" />
+      <workItem from="1582888319409" duration="1813000" />
+      <workItem from="1582963461524" duration="20114000" />
+      <workItem from="1583046801056" duration="6207000" />
+      <workItem from="1583995781466" duration="1279000" />
+      <workItem from="1584084426944" duration="8481000" />
+      <workItem from="1584180902623" duration="11454000" />
     </task>
     <servers />
   </component>
@@ -199,10 +202,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582783202379">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1584094608885">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582783202379" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584094608885" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1582286123224">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -211,17 +214,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="398" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582051290046" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1584209376569">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1584209376569" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582286777393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582286777393" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1582715781179">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1584215281339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582715781179" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582717388257">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584215281339" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584213086776">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582717388257" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584213086776" />
   </component>
 </project>

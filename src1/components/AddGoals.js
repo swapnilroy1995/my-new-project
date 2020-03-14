@@ -3,7 +3,7 @@ import {View, Text, Button, TextInput,StyleSheet, Keyboard} from 'react-native';
 
 export default function AddGoals(props){
     const [enteredGoal, setenteredGoal]= useState('');
-    function makeGoals(){
+    function makeGoals(enteredGoal){
         Keyboard.dismiss();
         props.makeGoalsList(enteredGoal);
         setenteredGoal((goal)=>'');
@@ -12,7 +12,7 @@ export default function AddGoals(props){
     return(
         <View style={styles.goalsTextInputContainer}>
             <TextInput placeholder={'Enter you goals one at a time'} style={styles.goalsTextInput} onChangeText={text=>setenteredGoal(text)} value ={enteredGoal}/>
-            <Button title='Add2' style={{borderRadius:5}} onPress={()=>makeGoals()}/>
+            <Button title='Add2' style={{borderRadius:5}} onPress={()=>makeGoals(enteredGoal)}/>
         </View>
     )
 

@@ -20,14 +20,23 @@ import ForgotPassword from "./../screens/ForgotPassword";
 import Login from "./../screens/Login";
 import Signup from "./../screens/Signup";
 import Practise from "../screens/Practise";
-import { Button, Text, View, TouchableOpacity, Animated } from "react-native";
+import HeaderComponent from './../components/HeaderComponent'
+import { Button, Text, View, TouchableOpacity, Animated, Image} from "react-native";
 
 const Stack = createStackNavigator();
 const BottomTab = createMaterialBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
 const Drawer = createDrawerNavigator();
 
+
+
 export default function RootStack() {
+    const [loggedIn, setloggedIn] = useState(false);
+    function changeLogin() {
+        // console.log("inside change login fucntion");
+        setloggedIn(!loggedIn);
+        // alert("login done");
+    }
   function MyDrawer() {
     return (
       <Drawer.Navigator>
@@ -46,20 +55,24 @@ export default function RootStack() {
   function MyBottomTab() {
     return (
       <BottomTab.Navigator
-          activeColor="#f0edf6"
+          activeColor="#3e2465"
           inactiveColor="#3e2465"
-          barStyle={{ backgroundColor: '#694fad' }}
-        // screenOptions={({ route }) => ({
-        //   tabBarIcon: ({ focused, color, size }) => {
-        //     let iconName;
-        //     if (route.name === "Home1") {
-        //       iconName = focused
-        //         ? "ios-information-circle"
-        //         : "ios-information-circle-outline";
-        //     }
-        //   }
-        // })
-        // }
+          barStyle={{ backgroundColor: '#F3565E' }}
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            // let iconName;
+            // if (route.name === "Home1") {
+            //   iconName = focused
+            //     ? "ios-information-circle"
+            //     : "ios-information-circle-outline";
+            // }
+             return <View
+                 style={focused?{backgroundColor:'#2AA198', height:25, width:35, borderRadius:5}:
+                     {height:15, width:25, borderRadius:5, borderWidth: 3, borderColor: '#2AA198'}}/>
+
+          }
+        })
+        }
 
       >
         <BottomTab.Screen name="Home1" children={MyDrawer} />
@@ -83,7 +96,7 @@ export default function RootStack() {
           title:'My App',
           // headerTransparent: true,
           // headerBackground: () => (
-          //     <BlurView tint="light" intensity={100} style={StyleSheet.absoluteFill} />
+          //     <BlurView tint="light" intensity={100} style={styleSheet.absoluteFill} />
           // ),
           header: ({ scene, previous, navigation }) => {
             const { options } = scene.descriptor;
@@ -99,37 +112,10 @@ export default function RootStack() {
               inputRange: [0, 1, 2],
               outputRange: [0, 1, 0],
             });
+            // const goBack=navigation.goBack();
             return (
                 <Animated.View style={{ opacity }}>
-              <View
-                style={{
-                  height: 40,
-                  width: "100%",
-                  flexDirection: "row",
-                  backgroundColor: "#F3565E"
-                }}
-              >
-                {previous ? (
-                  <TouchableOpacity
-                    style={{ flex: 1.5 , backgroundColor:'#fff', alignItems: 'center', justifyContent: 'center'}}
-                    onPress={navigation.goBack}
-                  >
-                    <Text styles={{fontSize:6}}> Go Back</Text>
-                  </TouchableOpacity>
-                ) : (
-                  <View style={{ flex: 1 }} />
-                )}
-                <View
-                  style={{
-                    flex: 5,
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <Text>{title}</Text>
-                </View>
-                <Button style={{ flex: 1 }} title={"Theme"} />
-              </View>
+                    <HeaderComponent previous={previous} title={title} navigation={navigation}/>
                 </Animated.View>
             );
           }
@@ -144,7 +130,7 @@ export default function RootStack() {
     );
   }
 
-  const [loggedIn, setloggedIn] = useState(false);
+
   function Authorisation(props) {
     return (
       <Stack.Navigator
@@ -160,11 +146,7 @@ export default function RootStack() {
       </Stack.Navigator>
     );
   }
-  function changeLogin() {
-    // console.log("inside change login fucntion");
-    setloggedIn(!loggedIn);
-    // alert("login done");
-  }
-  return !loggedIn ? <Authorisation /> : <Mystack />;
+
+  return loggedIn ? <Authorisation /> : <Mystack changeLogin={changeLogin}/>;
 }
 //
