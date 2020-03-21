@@ -25,4 +25,7 @@ const styles= StyleSheet.create({
         marginTop:3,
         marginLeft:3
     },
+    goalsTextInput:{
+        width:'80%'
+    }
 })

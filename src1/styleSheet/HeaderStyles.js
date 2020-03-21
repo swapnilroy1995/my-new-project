@@ -15,17 +15,17 @@ export const headerStyles = StyleSheet.create({
   },
   goBackLight: {
     flex: 1.5,
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
   },
   goBackDark: {
     flex: 1.5,
-    backgroundColor: "black",
+    // backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center"
   },
-  goBackTextLight: {fontSize:6},
+  goBackTextLight: {fontSize:6,},
   goBackTextDark: {fontSize:6, color: '#fff'},
     headerTitleLight:{letterSpacing:2},
     headerTitleDark:{letterSpacing:2, color:'#fff'},

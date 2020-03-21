@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, StatusBar, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import RootStack from "./routes/Routes";
+import Root from "./routes/Routes";
 import { Provider } from "react-redux";
 import configureStore from './store/store'
 const store = configureStore();
@@ -15,7 +15,7 @@ export default function App() {
         {/*    This is new screen*/}
         {/*  </Text>*/}
         {/*</>*/}
-        <RootStack />
+        <Root/>
       </NavigationContainer>
     </Provider>
   );

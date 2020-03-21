@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9225b5ab-524f-412c-a12a-2e898c3588ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src1/store/actions/AppFeatures.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/components/AddGoals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/components/AddGoals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/components/GoalsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/components/GoalsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/components/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/components/HeaderComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/screens/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/screens/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/screens/Practise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/screens/Practise.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src1/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/store/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/store/actions/Goals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/store/actions/Goals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/store/reducers/GoalReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/store/reducers/GoalReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src1/styleSheet/HeaderStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src1/styleSheet/HeaderStyles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +59,13 @@
   <component name="PropertiesComponent">
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/assets" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tutorials/[FreeCourseSite.com] Udemy - React Native - The Practical Guide/6. Navigation with React Navigation [THE MEALS APP]/nav-18-finished" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="G:\react-native\my-new-project\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="G:\webstorm\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -195,6 +204,17 @@
       <workItem from="1583995781466" duration="1279000" />
       <workItem from="1584084426944" duration="8481000" />
       <workItem from="1584180902623" duration="11454000" />
+      <workItem from="1584614697286" duration="13740000" />
+      <workItem from="1584697808178" duration="1677000" />
+      <workItem from="1584700364646" duration="2146000" />
+      <workItem from="1584703680854" duration="2080000" />
+      <workItem from="1584706172792" duration="1650000" />
+      <workItem from="1584708100618" duration="278000" />
+      <workItem from="1584709753241" duration="485000" />
+      <workItem from="1584724125604" duration="1706000" />
+      <workItem from="1584726007823" duration="1622000" />
+      <workItem from="1584730546402" duration="1527000" />
+      <workItem from="1584732368904" duration="1240000" />
     </task>
     <servers />
   </component>
@@ -202,33 +222,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1584264844485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1584264844485" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1584094608885">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584094608885" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1582286123224">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1584268543878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582286123224" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584268543878" />
     <state width="498" height="398" key="SwitcherDM" timestamp="1582051290046">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="398" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582051290046" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584265546346">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1584265546346" />
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1584209376569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1584209376569" />
+    <state x="428" y="53" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584730927030">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="428" y="53" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1584730927030" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582286777393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1582286777393" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1584215281339">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1584731846380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584215281339" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584213086776">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584731846380" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584731355223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584213086776" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584731355223" />
   </component>
 </project>

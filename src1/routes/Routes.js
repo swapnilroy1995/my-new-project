@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createDrawerNavigator,   DrawerContentScrollView,
+    DrawerItemList, } from "@react-navigation/drawer";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
@@ -20,8 +21,10 @@ import ForgotPassword from "./../screens/ForgotPassword";
 import Login from "./../screens/Login";
 import Signup from "./../screens/Signup";
 import Practise from "../screens/Practise";
-import HeaderComponent from './../components/HeaderComponent'
-import { Button, Text, View, TouchableOpacity, Animated, Image} from "react-native";
+import HeaderComponent from './../components/HeaderComponent';
+import { Button, Text, View, TouchableOpacity, Animated, Image, Dimensions} from "react-native";
+import {connect} from 'react-redux';
+import {changeTheme} from "../store/actions/AppFeatures";
 
 const Stack = createStackNavigator();
 const BottomTab = createMaterialBottomTabNavigator();
@@ -30,22 +33,39 @@ const Drawer = createDrawerNavigator();
 
 
 
-export default function RootStack() {
+function RootStack(props) {
     const [loggedIn, setloggedIn] = useState(false);
     function changeLogin() {
         // console.log("inside change login fucntion");
         setloggedIn(!loggedIn);
         // alert("login done");
     }
+    const forTheme=props.props.theme;
+    function CustomDrawerContent(props) {
+        // console.log('props in rootstack',forTheme);
+        return (
+            <DrawerContentScrollView {...props} style={{ backgroundColor: forTheme ==='Light'?'#000':'#121212',}}>
+                <DrawerItemList {...props} />
+            </DrawerContentScrollView>
+        );
+    }
   function MyDrawer() {
+        // console.log('props in rootstack',props.props.theme);
     return (
-      <Drawer.Navigator>
+      <Drawer.Navigator
+          drawerContent={props => <CustomDrawerContent {...props} />}
+          drawerType={Dimensions.width > 400 ? 'permanent' : 'slide'}
+          // drawerStyle={{
+          //     backgroundColor: props.props.theme==='Light'?'#000':'#121212',
+          //     // width: 240,
+          // }}
+      >
         <Drawer.Screen
-          name="Practise"
-          component={Practise}
-          initialParams={{ setLoggedIn: changeLogin }}
+          name="HomeScreen"
+          component={Mystack}
+          initialParams={{ setLoggedIn: changeLogin ,}}
         />
-        <Drawer.Screen name="Drawer1" component={Drawer1} />
+        <Drawer.Screen name="Drawer1" component={Drawer1} label={props.theme} />
         <Drawer.Screen name="Drawer2" component={Drawer2} />
         <Drawer.Screen name="Drawer3" component={Drawer3} />
         <Drawer.Screen name="Drawer4" component={Drawer4} />
@@ -75,7 +95,7 @@ export default function RootStack() {
         }
 
       >
-        <BottomTab.Screen name="Home1" children={MyDrawer} />
+        <BottomTab.Screen name="Home1" component={Practise} />
         <BottomTab.Screen name="Tab1" component={Tab1} />
         {/*<BottomTab.Screen name="Stack1" component={Stack1} />*/}
         <BottomTab.Screen name="Tab2" component={Tab2} />
@@ -93,7 +113,6 @@ export default function RootStack() {
         headerMode={"float"}
 
         screenOptions={{
-          title:'My App',
           // headerTransparent: true,
           // headerBackground: () => (
           //     <BlurView tint="light" intensity={100} style={styleSheet.absoluteFill} />
@@ -115,13 +134,13 @@ export default function RootStack() {
             // const goBack=navigation.goBack();
             return (
                 <Animated.View style={{ opacity }}>
-                    <HeaderComponent previous={previous} title={title} navigation={navigation}/>
+                    <HeaderComponent previous={previous} title={title} navigationer={navigation} />
                 </Animated.View>
             );
           }
         }}
       >
-        <Stack.Screen name="Home" children={MyBottomTab} />
+        <Stack.Screen name="Home" children={MyBottomTab} options={{title:'Home'}} />
         <Stack.Screen name="Stack1" component={Stack1} />
         <Stack.Screen name="Practise" component={Practise} />
         <Stack.Screen name="Stack2" component={Stack2} />
@@ -131,22 +150,52 @@ export default function RootStack() {
   }
 
 
-  function Authorisation(props) {
-    return (
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false
-        }}
-      >
-        <Stack.Screen
-          name="Home"
-          component={Login}
-          initialParams={{ setLoggedIn: changeLogin, item: "Login" }}
-        />
-      </Stack.Navigator>
-    );
-  }
+  // function Authorisation(props) {
+  //   return (
+  //     <Stack.Navigator
+  //       screenOptions={{
+  //         headerShown: false
+  //       }}
+  //     >
+  //       <Stack.Screen
+  //         name="Home"
+  //         component={Login}
+  //         initialParams={{ setLoggedIn: changeLogin, item: "Login" }}
+  //       />
+  //     </Stack.Navigator>
+  //   );
+  // }
 
-  return loggedIn ? <Authorisation /> : <Mystack changeLogin={changeLogin}/>;
+    function Authorisation(props) {
+        return (
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <Stack.Screen
+                    name="Home"
+                    component={Login}
+                    initialParams={{ setLoggedIn: changeLogin, item: "Login" }}
+                />
+            </Stack.Navigator>
+        );
+    }
+
+  return !loggedIn ? <Authorisation /> : <MyDrawer changeLogin={changeLogin}/>;
+}
+class Root extends Component{
+    render(){
+        return(
+            <RootStack props={this.props}/>
+        );
+    }
 }
 //
+const mapStateToProps=(state)=>{
+    // console.log('theme mapstatetoprops',state)
+    return {theme:state.AppFeaturesReducer.theme}
+};
+
+
+export default connect(mapStateToProps)(Root);
