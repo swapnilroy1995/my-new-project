@@ -1,0 +1,9 @@
+export const LOGGED_IN= "LOGGED_IN";
+export const LOGGED_OUT= "LOGGED_OUT";
+export const SIGN_UP= "SIGN_UP";
+export const FORGOT_PASSWORD= "FORGOT_PASSWORD";
+export const ADD_GOAL= "ADD_GOAL";
+export const DELETE_GOAL= "DELETE_GOAL";
+export const EDIT_GOAL= "EDIT_GOAL";
+export const CHANGE_THEME= "CHANGE_THEME";
+// export const SIGN_UP= "SIGN_UP";
