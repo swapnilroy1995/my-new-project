@@ -93,7 +93,6 @@ function RootStack(props) {
           }
         })
         }
-
       >
         <BottomTab.Screen name="Home1" component={Practise} />
         <BottomTab.Screen name="Tab1" component={Tab1} />
@@ -182,9 +181,9 @@ function RootStack(props) {
         );
     }
 
-  return !loggedIn ? <Authorisation /> : <MyDrawer changeLogin={changeLogin}/>;
+  return loggedIn ? <Authorisation /> : <MyDrawer changeLogin={changeLogin}/>;
 }
-class Root extends Component{
+class Root1 extends Component{
     render(){
         return(
             <RootStack props={this.props}/>
@@ -198,4 +197,4 @@ const mapStateToProps=(state)=>{
 };
 
 
-export default connect(mapStateToProps)(Root);
+export default connect(mapStateToProps)(Root1);

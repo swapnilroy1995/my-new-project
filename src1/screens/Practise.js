@@ -11,7 +11,7 @@ class CountFunction extends Component{
         super(props);
     }
     componentDidMount() {
-        this.props.fetchGoals();
+        // this.props.fetchGoals();
     }
 
     // const [count, setcount] = useState(0);

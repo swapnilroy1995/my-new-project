@@ -9,7 +9,6 @@ export default function Tab4(){
             <Text>
                 This is new Tab4
             </Text>
-            <Button title={"Go to..."}/>
         </View>
     )
 }
