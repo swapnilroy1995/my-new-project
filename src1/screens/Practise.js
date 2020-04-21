@@ -2,7 +2,7 @@ import React, {Component,useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, StatusBar,TextInput, Button, Alert} from 'react-native';
 import AddGoals from '../components/AddGoals';
 import GoalsList from '../components/GoalsList';
-import {addGoal, deleteGoal} from './../store/actions/Goals';
+import {addGoal, deleteGoal, fetchGoals} from './../store/actions/Goals';
 import {connect} from 'react-redux';
  // function CountFunction(navigation, route, props){
 var listGoal =[];
@@ -10,6 +10,10 @@ class CountFunction extends Component{
     constructor(props){
         super(props);
     }
+    componentDidMount() {
+        // this.props.fetchGoals();
+    }
+
     // const [count, setcount] = useState(0);
     // const [goalsCount, setgoalsCount] = useState(0);
     // const [listGoal, setlistGoal] = useState([]);
@@ -20,7 +24,7 @@ class CountFunction extends Component{
         // setlistGoal(currentList=>[...currentList,{key:(goalsCount+Math.random()).toString(),goal:enteredGoal}]);
         // setgoalsCount(currentCount=> goalsCount+1);
         this.props.addGoal(enteredGoal);
-        console.log('goals',this.props);
+        // console.log('goals',this.props);
          // listGoal=this.props.goals.map;
 
     };
@@ -40,6 +44,7 @@ class CountFunction extends Component{
     render() {
         return (
             <View style={{flex: 1, }}>
+
 
                 <TouchableOpacity
                     style={styles.increase}
@@ -65,10 +70,12 @@ class CountFunction extends Component{
                     <AddGoals makeGoalsList={this.makeGoalsList}/>
                     <TouchableOpacity
                         style={styles.decrease}
-                        // onPress={() => {
-                        //     navigation.route.params.setLoggedIn();
-                        // }}
-                        onPress={()=>this.makeGoalsList()}
+                        onPress={() => {
+                           this.props.navigation.openDrawer();
+                           // console.log('inside logout button,', this.props)
+                           // console.log('inside logout button,', this.props)
+                        }}
+                        // onPress={()=>this.makeGoalsList()}
                     >
                         <Text>logout</Text>
                     </TouchableOpacity>
@@ -122,13 +129,14 @@ const styles = StyleSheet.create({
 const mapStateToProps=(state)=>{
     // console.log('inside mapstatetoprops',state);
     // let goal=state.GoalReducer.goalList.map(g=>({key:g.key,goal:g.goal}));
-    // console.log('mapped',goal);
+    // console.log('mapped',state.GoalReducer.goalList,);
     return {goalList:state.GoalReducer.goalList,}
 };
 const mapDispatchToProps=(dispatch)=>{
     return {
         addGoal:(goal)=> dispatch(addGoal(goal)),
-        deleteGoal:(enteredKey)=> dispatch(deleteGoal(enteredKey))
+        deleteGoal:(enteredKey)=> dispatch(deleteGoal(enteredKey)),
+        fetchGoals:()=> dispatch(fetchGoals())
     }
 };
 

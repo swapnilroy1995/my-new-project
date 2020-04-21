@@ -20,20 +20,28 @@
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.5.0",
+    "react-native-country-picker-modal": "^1.10.0",
+    "react-native-gesture-handler": "^1.6.1",
     "react-native-paper": "^3.6.0",
     "react-native-reanimated": "~1.4.0",
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
+    "react-native-svg": "^12.1.0",
+    "react-native-svg-charts": "^5.4.0",
     "react-native-tab-view": "^2.13.0",
     "react-native-web": "~0.11.7",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@testing-library/react": "^10.0.2",
     "babel-preset-expo": "~8.0.0",
+    "jest": "^25.2.7",
+    "jest-dom": "^4.0.0",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1",
     "redux-devtools": "^3.5.0"
   },
   "private": true
